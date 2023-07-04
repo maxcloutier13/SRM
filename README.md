@@ -8,7 +8,7 @@ SRM _(Swifty Repo Manager)_ is a simple User Interface for managing multiple rep
 
 ## Download
 
-SRM is available for Windows only via [GitHub Releases](https://github.com/bux/SRM/releases/latest).
+SRM is available for Windows only via [GitHub Releases](https://github.com/maxcloutier13/SRM/releases).
 
 ## Contributing
 
