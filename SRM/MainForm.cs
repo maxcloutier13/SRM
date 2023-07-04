@@ -250,7 +250,6 @@ namespace SRM
         private void ReadoutAllValues()
         {
             _activeProfile.Name = textBoxProfileName.Text;
-
             _activeProfile.Repository.Name = textBoxRepoName.Text;
             _activeProfile.Repository.ImagePath = textBoxRepoImage.Text;
             _activeProfile.Repository.IconPath = textBoxRepoIcon.Text;
@@ -537,5 +536,10 @@ namespace SRM
         }
 
         #endregion
+
+        private void textBoxServerPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

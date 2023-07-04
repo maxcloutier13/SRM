@@ -42,18 +42,24 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnRemoveFromOptionalMods = new System.Windows.Forms.Button();
             this.btnAddToOptionalMods = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnAddToRequiredMods = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.listBoxOptionalMods = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.listBoxRequiredMods = new System.Windows.Forms.ListBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonCreateRepository = new System.Windows.Forms.Button();
             this.buttonSaveProfile = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnRemoveFromRequiredMods = new System.Windows.Forms.Button();
+            this.btnAddToRequiredMods = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.linkLabelSelectAllOptionalMods = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeselectAllOptionalMods = new System.Windows.Forms.LinkLabel();
+            this.listBoxOptionalMods = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.linkLabelSelectAllRequiredMods = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeselectAllRequiredMods = new System.Windows.Forms.LinkLabel();
+            this.listBoxRequiredMods = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabelSelectAllMods = new System.Windows.Forms.LinkLabel();
             this.linkLabelDeselectAllMods = new System.Windows.Forms.LinkLabel();
@@ -85,19 +91,13 @@
             this.textBoxProfilePath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxProfileName = new System.Windows.Forms.TextBox();
-            this.linkLabelDeselectAllOptionalMods = new System.Windows.Forms.LinkLabel();
-            this.linkLabelDeselectAllRequiredMods = new System.Windows.Forms.LinkLabel();
-            this.linkLabelSelectAllOptionalMods = new System.Windows.Forms.LinkLabel();
-            this.linkLabelSelectAllRequiredMods = new System.Windows.Forms.LinkLabel();
-            this.btnRemoveFromRequiredMods = new System.Windows.Forms.Button();
-            this.btnRemoveFromOptionalMods = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBoxProfile.SuspendLayout();
@@ -223,6 +223,16 @@
             this.panel8.Size = new System.Drawing.Size(88, 93);
             this.panel8.TabIndex = 7;
             // 
+            // btnRemoveFromOptionalMods
+            // 
+            this.btnRemoveFromOptionalMods.Location = new System.Drawing.Point(3, 49);
+            this.btnRemoveFromOptionalMods.Name = "btnRemoveFromOptionalMods";
+            this.btnRemoveFromOptionalMods.Size = new System.Drawing.Size(82, 40);
+            this.btnRemoveFromOptionalMods.TabIndex = 2;
+            this.btnRemoveFromOptionalMods.Text = "←";
+            this.btnRemoveFromOptionalMods.UseVisualStyleBackColor = true;
+            this.btnRemoveFromOptionalMods.Click += new System.EventHandler(this.btnRemoveFromOptionalMods_Click);
+            // 
             // btnAddToOptionalMods
             // 
             this.btnAddToOptionalMods.Location = new System.Drawing.Point(3, 3);
@@ -232,6 +242,37 @@
             this.btnAddToOptionalMods.Text = "→";
             this.btnAddToOptionalMods.UseVisualStyleBackColor = true;
             this.btnAddToOptionalMods.Click += new System.EventHandler(this.btnAddToOptionalMods_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.buttonCreateRepository);
+            this.panel4.Controls.Add(this.buttonSaveProfile);
+            this.panel4.Location = new System.Drawing.Point(598, 256);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(108, 118);
+            this.panel4.TabIndex = 5;
+            // 
+            // buttonCreateRepository
+            // 
+            this.buttonCreateRepository.Location = new System.Drawing.Point(3, 49);
+            this.buttonCreateRepository.Name = "buttonCreateRepository";
+            this.buttonCreateRepository.Size = new System.Drawing.Size(100, 40);
+            this.buttonCreateRepository.TabIndex = 2;
+            this.buttonCreateRepository.Text = "Create Repository";
+            this.buttonCreateRepository.UseVisualStyleBackColor = true;
+            this.buttonCreateRepository.Click += new System.EventHandler(this.buttonCreateRepository_Click);
+            // 
+            // buttonSaveProfile
+            // 
+            this.buttonSaveProfile.Location = new System.Drawing.Point(3, 3);
+            this.buttonSaveProfile.Name = "buttonSaveProfile";
+            this.buttonSaveProfile.Size = new System.Drawing.Size(100, 40);
+            this.buttonSaveProfile.TabIndex = 10;
+            this.buttonSaveProfile.Text = "Save Profile";
+            this.buttonSaveProfile.UseVisualStyleBackColor = true;
+            this.buttonSaveProfile.Click += new System.EventHandler(this.buttonSaveProfile_Click);
             // 
             // panel7
             // 
@@ -243,6 +284,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(88, 92);
             this.panel7.TabIndex = 6;
+            // 
+            // btnRemoveFromRequiredMods
+            // 
+            this.btnRemoveFromRequiredMods.Location = new System.Drawing.Point(3, 49);
+            this.btnRemoveFromRequiredMods.Name = "btnRemoveFromRequiredMods";
+            this.btnRemoveFromRequiredMods.Size = new System.Drawing.Size(82, 40);
+            this.btnRemoveFromRequiredMods.TabIndex = 2;
+            this.btnRemoveFromRequiredMods.Text = "←";
+            this.btnRemoveFromRequiredMods.UseVisualStyleBackColor = true;
+            this.btnRemoveFromRequiredMods.Click += new System.EventHandler(this.btnRemoveFromRequiredMods_Click);
             // 
             // btnAddToRequiredMods
             // 
@@ -266,6 +317,34 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(240, 264);
             this.panel6.TabIndex = 9;
+            // 
+            // linkLabelSelectAllOptionalMods
+            // 
+            this.linkLabelSelectAllOptionalMods.AutoSize = true;
+            this.linkLabelSelectAllOptionalMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabelSelectAllOptionalMods.Location = new System.Drawing.Point(175, 10);
+            this.linkLabelSelectAllOptionalMods.Name = "linkLabelSelectAllOptionalMods";
+            this.linkLabelSelectAllOptionalMods.Size = new System.Drawing.Size(18, 13);
+            this.linkLabelSelectAllOptionalMods.TabIndex = 7;
+            this.linkLabelSelectAllOptionalMods.TabStop = true;
+            this.linkLabelSelectAllOptionalMods.Text = "All";
+            this.linkLabelSelectAllOptionalMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.linkLabelSelectAllOptionalMods.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.linkLabelSelectAllOptionalMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSelectAllOptionalMods_LinkClicked);
+            // 
+            // linkLabelDeselectAllOptionalMods
+            // 
+            this.linkLabelDeselectAllOptionalMods.AutoSize = true;
+            this.linkLabelDeselectAllOptionalMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabelDeselectAllOptionalMods.Location = new System.Drawing.Point(199, 10);
+            this.linkLabelDeselectAllOptionalMods.Name = "linkLabelDeselectAllOptionalMods";
+            this.linkLabelDeselectAllOptionalMods.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelDeselectAllOptionalMods.TabIndex = 6;
+            this.linkLabelDeselectAllOptionalMods.TabStop = true;
+            this.linkLabelDeselectAllOptionalMods.Text = "None";
+            this.linkLabelDeselectAllOptionalMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.linkLabelDeselectAllOptionalMods.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.linkLabelDeselectAllOptionalMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeselectAllOptionalMods_LinkClicked);
             // 
             // listBoxOptionalMods
             // 
@@ -300,6 +379,34 @@
             this.panel5.Size = new System.Drawing.Size(240, 325);
             this.panel5.TabIndex = 8;
             // 
+            // linkLabelSelectAllRequiredMods
+            // 
+            this.linkLabelSelectAllRequiredMods.AutoSize = true;
+            this.linkLabelSelectAllRequiredMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabelSelectAllRequiredMods.Location = new System.Drawing.Point(175, 10);
+            this.linkLabelSelectAllRequiredMods.Name = "linkLabelSelectAllRequiredMods";
+            this.linkLabelSelectAllRequiredMods.Size = new System.Drawing.Size(18, 13);
+            this.linkLabelSelectAllRequiredMods.TabIndex = 7;
+            this.linkLabelSelectAllRequiredMods.TabStop = true;
+            this.linkLabelSelectAllRequiredMods.Text = "All";
+            this.linkLabelSelectAllRequiredMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.linkLabelSelectAllRequiredMods.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.linkLabelSelectAllRequiredMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSelectAllRequiredMods_LinkClicked);
+            // 
+            // linkLabelDeselectAllRequiredMods
+            // 
+            this.linkLabelDeselectAllRequiredMods.AutoSize = true;
+            this.linkLabelDeselectAllRequiredMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabelDeselectAllRequiredMods.Location = new System.Drawing.Point(199, 10);
+            this.linkLabelDeselectAllRequiredMods.Name = "linkLabelDeselectAllRequiredMods";
+            this.linkLabelDeselectAllRequiredMods.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelDeselectAllRequiredMods.TabIndex = 6;
+            this.linkLabelDeselectAllRequiredMods.TabStop = true;
+            this.linkLabelDeselectAllRequiredMods.Text = "None";
+            this.linkLabelDeselectAllRequiredMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.linkLabelDeselectAllRequiredMods.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.linkLabelDeselectAllRequiredMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeselectAllRequiredMods_LinkClicked);
+            // 
             // listBoxRequiredMods
             // 
             this.listBoxRequiredMods.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -319,37 +426,6 @@
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 3;
             this.label12.Text = "Required Mods";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.buttonCreateRepository);
-            this.panel4.Controls.Add(this.buttonSaveProfile);
-            this.panel4.Location = new System.Drawing.Point(598, 256);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(108, 118);
-            this.panel4.TabIndex = 5;
-            // 
-            // buttonCreateRepository
-            // 
-            this.buttonCreateRepository.Location = new System.Drawing.Point(3, 49);
-            this.buttonCreateRepository.Name = "buttonCreateRepository";
-            this.buttonCreateRepository.Size = new System.Drawing.Size(100, 40);
-            this.buttonCreateRepository.TabIndex = 2;
-            this.buttonCreateRepository.Text = "Create Repository";
-            this.buttonCreateRepository.UseVisualStyleBackColor = true;
-            this.buttonCreateRepository.Click += new System.EventHandler(this.buttonCreateRepository_Click);
-            // 
-            // buttonSaveProfile
-            // 
-            this.buttonSaveProfile.Location = new System.Drawing.Point(3, 3);
-            this.buttonSaveProfile.Name = "buttonSaveProfile";
-            this.buttonSaveProfile.Size = new System.Drawing.Size(100, 40);
-            this.buttonSaveProfile.TabIndex = 1;
-            this.buttonSaveProfile.Text = "Save Profile";
-            this.buttonSaveProfile.UseVisualStyleBackColor = true;
-            this.buttonSaveProfile.Click += new System.EventHandler(this.buttonSaveProfile_Click);
             // 
             // panel3
             // 
@@ -478,9 +554,8 @@
             // 
             this.textBoxRepoIcon.Location = new System.Drawing.Point(6, 212);
             this.textBoxRepoIcon.Name = "textBoxRepoIcon";
-            this.textBoxRepoIcon.ReadOnly = true;
             this.textBoxRepoIcon.Size = new System.Drawing.Size(200, 20);
-            this.textBoxRepoIcon.TabIndex = 22;
+            this.textBoxRepoIcon.TabIndex = 4;
             // 
             // buttonBrowseRepoImage
             // 
@@ -505,9 +580,8 @@
             // 
             this.textBoxRepoImage.Location = new System.Drawing.Point(6, 168);
             this.textBoxRepoImage.Name = "textBoxRepoImage";
-            this.textBoxRepoImage.ReadOnly = true;
             this.textBoxRepoImage.Size = new System.Drawing.Size(200, 20);
-            this.textBoxRepoImage.TabIndex = 19;
+            this.textBoxRepoImage.TabIndex = 3;
             // 
             // label9
             // 
@@ -523,7 +597,7 @@
             this.textBoxRepoName.Location = new System.Drawing.Point(6, 78);
             this.textBoxRepoName.Name = "textBoxRepoName";
             this.textBoxRepoName.Size = new System.Drawing.Size(200, 20);
-            this.textBoxRepoName.TabIndex = 17;
+            this.textBoxRepoName.TabIndex = 1;
             // 
             // checkBoxServerBattleEye
             // 
@@ -549,7 +623,8 @@
             this.textBoxServerPassword.Location = new System.Drawing.Point(269, 123);
             this.textBoxServerPassword.Name = "textBoxServerPassword";
             this.textBoxServerPassword.Size = new System.Drawing.Size(200, 20);
-            this.textBoxServerPassword.TabIndex = 14;
+            this.textBoxServerPassword.TabIndex = 7;
+            this.textBoxServerPassword.TextChanged += new System.EventHandler(this.textBoxServerPassword_TextChanged);
             // 
             // label4
             // 
@@ -565,7 +640,7 @@
             this.textBoxServerPort.Location = new System.Drawing.Point(481, 78);
             this.textBoxServerPort.Name = "textBoxServerPort";
             this.textBoxServerPort.Size = new System.Drawing.Size(57, 20);
-            this.textBoxServerPort.TabIndex = 12;
+            this.textBoxServerPort.TabIndex = 9;
             // 
             // label5
             // 
@@ -581,7 +656,7 @@
             this.textBoxServerAddress.Location = new System.Drawing.Point(269, 78);
             this.textBoxServerAddress.Name = "textBoxServerAddress";
             this.textBoxServerAddress.Size = new System.Drawing.Size(200, 20);
-            this.textBoxServerAddress.TabIndex = 9;
+            this.textBoxServerAddress.TabIndex = 6;
             // 
             // label6
             // 
@@ -597,7 +672,7 @@
             this.textBoxServerName.Location = new System.Drawing.Point(269, 32);
             this.textBoxServerName.Name = "textBoxServerName";
             this.textBoxServerName.Size = new System.Drawing.Size(200, 20);
-            this.textBoxServerName.TabIndex = 7;
+            this.textBoxServerName.TabIndex = 5;
             // 
             // label3
             // 
@@ -613,14 +688,14 @@
             this.textBoxClientParameters.Location = new System.Drawing.Point(269, 168);
             this.textBoxClientParameters.Name = "textBoxClientParameters";
             this.textBoxClientParameters.Size = new System.Drawing.Size(200, 20);
-            this.textBoxClientParameters.TabIndex = 5;
+            this.textBoxClientParameters.TabIndex = 8;
             // 
             // buttonBrowseProfilePath
             // 
             this.buttonBrowseProfilePath.Location = new System.Drawing.Point(212, 122);
             this.buttonBrowseProfilePath.Name = "buttonBrowseProfilePath";
             this.buttonBrowseProfilePath.Size = new System.Drawing.Size(25, 23);
-            this.buttonBrowseProfilePath.TabIndex = 4;
+            this.buttonBrowseProfilePath.TabIndex = 20;
             this.buttonBrowseProfilePath.Text = "...";
             this.buttonBrowseProfilePath.UseVisualStyleBackColor = true;
             this.buttonBrowseProfilePath.Click += new System.EventHandler(this.buttonBrowseProfilePath_Click);
@@ -638,7 +713,6 @@
             // 
             this.textBoxProfilePath.Location = new System.Drawing.Point(6, 124);
             this.textBoxProfilePath.Name = "textBoxProfilePath";
-            this.textBoxProfilePath.ReadOnly = true;
             this.textBoxProfilePath.Size = new System.Drawing.Size(200, 20);
             this.textBoxProfilePath.TabIndex = 2;
             // 
@@ -659,82 +733,6 @@
             this.textBoxProfileName.Size = new System.Drawing.Size(200, 20);
             this.textBoxProfileName.TabIndex = 0;
             // 
-            // linkLabelDeselectAllOptionalMods
-            // 
-            this.linkLabelDeselectAllOptionalMods.AutoSize = true;
-            this.linkLabelDeselectAllOptionalMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.linkLabelDeselectAllOptionalMods.Location = new System.Drawing.Point(199, 10);
-            this.linkLabelDeselectAllOptionalMods.Name = "linkLabelDeselectAllOptionalMods";
-            this.linkLabelDeselectAllOptionalMods.Size = new System.Drawing.Size(33, 13);
-            this.linkLabelDeselectAllOptionalMods.TabIndex = 6;
-            this.linkLabelDeselectAllOptionalMods.TabStop = true;
-            this.linkLabelDeselectAllOptionalMods.Text = "None";
-            this.linkLabelDeselectAllOptionalMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.linkLabelDeselectAllOptionalMods.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabelDeselectAllOptionalMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeselectAllOptionalMods_LinkClicked);
-            // 
-            // linkLabelDeselectAllRequiredMods
-            // 
-            this.linkLabelDeselectAllRequiredMods.AutoSize = true;
-            this.linkLabelDeselectAllRequiredMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.linkLabelDeselectAllRequiredMods.Location = new System.Drawing.Point(199, 10);
-            this.linkLabelDeselectAllRequiredMods.Name = "linkLabelDeselectAllRequiredMods";
-            this.linkLabelDeselectAllRequiredMods.Size = new System.Drawing.Size(33, 13);
-            this.linkLabelDeselectAllRequiredMods.TabIndex = 6;
-            this.linkLabelDeselectAllRequiredMods.TabStop = true;
-            this.linkLabelDeselectAllRequiredMods.Text = "None";
-            this.linkLabelDeselectAllRequiredMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.linkLabelDeselectAllRequiredMods.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabelDeselectAllRequiredMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeselectAllRequiredMods_LinkClicked);
-            // 
-            // linkLabelSelectAllOptionalMods
-            // 
-            this.linkLabelSelectAllOptionalMods.AutoSize = true;
-            this.linkLabelSelectAllOptionalMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.linkLabelSelectAllOptionalMods.Location = new System.Drawing.Point(175, 10);
-            this.linkLabelSelectAllOptionalMods.Name = "linkLabelSelectAllOptionalMods";
-            this.linkLabelSelectAllOptionalMods.Size = new System.Drawing.Size(18, 13);
-            this.linkLabelSelectAllOptionalMods.TabIndex = 7;
-            this.linkLabelSelectAllOptionalMods.TabStop = true;
-            this.linkLabelSelectAllOptionalMods.Text = "All";
-            this.linkLabelSelectAllOptionalMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.linkLabelSelectAllOptionalMods.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabelSelectAllOptionalMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSelectAllOptionalMods_LinkClicked);
-            // 
-            // linkLabelSelectAllRequiredMods
-            // 
-            this.linkLabelSelectAllRequiredMods.AutoSize = true;
-            this.linkLabelSelectAllRequiredMods.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.linkLabelSelectAllRequiredMods.Location = new System.Drawing.Point(175, 10);
-            this.linkLabelSelectAllRequiredMods.Name = "linkLabelSelectAllRequiredMods";
-            this.linkLabelSelectAllRequiredMods.Size = new System.Drawing.Size(18, 13);
-            this.linkLabelSelectAllRequiredMods.TabIndex = 7;
-            this.linkLabelSelectAllRequiredMods.TabStop = true;
-            this.linkLabelSelectAllRequiredMods.Text = "All";
-            this.linkLabelSelectAllRequiredMods.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.linkLabelSelectAllRequiredMods.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabelSelectAllRequiredMods.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSelectAllRequiredMods_LinkClicked);
-            // 
-            // btnRemoveFromRequiredMods
-            // 
-            this.btnRemoveFromRequiredMods.Location = new System.Drawing.Point(3, 49);
-            this.btnRemoveFromRequiredMods.Name = "btnRemoveFromRequiredMods";
-            this.btnRemoveFromRequiredMods.Size = new System.Drawing.Size(82, 40);
-            this.btnRemoveFromRequiredMods.TabIndex = 2;
-            this.btnRemoveFromRequiredMods.Text = "←";
-            this.btnRemoveFromRequiredMods.UseVisualStyleBackColor = true;
-            this.btnRemoveFromRequiredMods.Click += new System.EventHandler(this.btnRemoveFromRequiredMods_Click);
-            // 
-            // btnRemoveFromOptionalMods
-            // 
-            this.btnRemoveFromOptionalMods.Location = new System.Drawing.Point(3, 49);
-            this.btnRemoveFromOptionalMods.Name = "btnRemoveFromOptionalMods";
-            this.btnRemoveFromOptionalMods.Size = new System.Drawing.Size(82, 40);
-            this.btnRemoveFromOptionalMods.TabIndex = 2;
-            this.btnRemoveFromOptionalMods.Text = "←";
-            this.btnRemoveFromOptionalMods.UseVisualStyleBackColor = true;
-            this.btnRemoveFromOptionalMods.Click += new System.EventHandler(this.btnRemoveFromOptionalMods_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -750,12 +748,12 @@
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
