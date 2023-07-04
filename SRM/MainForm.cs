@@ -423,8 +423,41 @@ namespace SRM
         {
             ReadoutAllValues();
 
-            _settingsManager.SaveSettings(_settings);
+            // Convert RepoProfileViewModel to RepoProfile
+            RepoProfile repoProfile = new RepoProfile
+            {
+                Name = _activeProfile.Name,
+                Repository = new Repository
+                {
+                    Name = _activeProfile.Repository.Name,
+                    ImagePath = _activeProfile.Repository.ImagePath,
+                    IconPath = _activeProfile.Repository.IconPath,
+                    ClientParams = _activeProfile.Repository.ClientParams,
+                    TargetPath = _activeProfile.Repository.TargetPath,
+                    ServerInfo = new ServerInfo
+                    {
+                        Address = _activeProfile.Repository.ServerInfo.Address,
+                        Name = _activeProfile.Repository.ServerInfo.Name,
+                        Password = _activeProfile.Repository.ServerInfo.Password,
+                        Port = _activeProfile.Repository.ServerInfo.Port,
+                        BattleEye = _activeProfile.Repository.ServerInfo.BattleEye
+                    }
+                }
+            };
+
+            // Find the index of _activeProfile within _settings.RepoProfiles
+            int profileIndex = _settings.RepoProfiles.FindIndex(p => p.Name == _activeProfile.Name);
+
+            if (profileIndex >= 0)
+            {
+                // Update the profile within _settings.RepoProfiles with the converted RepoProfile
+                _settings.RepoProfiles[profileIndex] = repoProfile;
+
+                // Save the updated _settings object
+                _settingsManager.SaveSettings(_settings);
+            }
         }
+
 
         private void buttonCreateRepository_Click(object sender, EventArgs e)
         {
