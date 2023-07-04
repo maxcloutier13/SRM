@@ -258,11 +258,15 @@ namespace SRM
             _activeProfile.Repository.ServerInfo.Address = textBoxServerAddress.Text;
             _activeProfile.Repository.ServerInfo.Name = textBoxServerName.Text;
             _activeProfile.Repository.ServerInfo.Password = textBoxServerPassword.Text;
-
             var result = int.TryParse(textBoxServerPort.Text, out var portResult) ? portResult : 2302;
             _activeProfile.Repository.ServerInfo.Port = result;
-
             _activeProfile.Repository.ServerInfo.BattleEye = checkBoxServerBattleEye.Checked;
+            // Get the selected mods from the list boxes
+            var requiredMods = new BindingList<string>(listBoxRequiredMods.Items.Cast<string>().ToList());
+            var optionalMods = new BindingList<string>(listBoxOptionalMods.Items.Cast<string>().ToList());
+            // Assign the mods to the active profile
+            _activeProfile.Repository.Mods = requiredMods;
+            _activeProfile.Repository.OptionalMods = optionalMods;
         }
 
         private void MoveListBoxItems(ListBox sourceListBox, BindingList<string> sourceList, ListBox targetListBox, BindingList<string> targetList)
@@ -434,6 +438,8 @@ namespace SRM
                     IconPath = _activeProfile.Repository.IconPath,
                     ClientParams = _activeProfile.Repository.ClientParams,
                     TargetPath = _activeProfile.Repository.TargetPath,
+                    Mods = _activeProfile.Repository.Mods,
+                    OptionalMods = _activeProfile.Repository.OptionalMods,
                     ServerInfo = new ServerInfo
                     {
                         Address = _activeProfile.Repository.ServerInfo.Address,
@@ -457,6 +463,10 @@ namespace SRM
                 _settingsManager.SaveSettings(_settings);
             }
         }
+
+
+
+
 
 
         private void buttonCreateRepository_Click(object sender, EventArgs e)
@@ -571,6 +581,11 @@ namespace SRM
         #endregion
 
         private void textBoxServerPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxRequiredMods_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

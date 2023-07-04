@@ -1,4 +1,4 @@
-﻿namespace SRM
+namespace SRM
 {
     partial class MainForm
     {
@@ -132,40 +132,40 @@
             // newProfileToolStripMenuItem
             // 
             this.newProfileToolStripMenuItem.Name = "newProfileToolStripMenuItem";
-            this.newProfileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.newProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newProfileToolStripMenuItem.Text = "New Profile";
             this.newProfileToolStripMenuItem.Click += new System.EventHandler(this.newProfileToolStripMenuItem_Click);
             // 
             // renameProfileToolStripMenuItem
             // 
             this.renameProfileToolStripMenuItem.Name = "renameProfileToolStripMenuItem";
-            this.renameProfileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.renameProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.renameProfileToolStripMenuItem.Text = "Rename Profile";
             this.renameProfileToolStripMenuItem.Click += new System.EventHandler(this.renameProfileToolStripMenuItem_Click);
             // 
             // duplicateProfileToolStripMenuItem
             // 
             this.duplicateProfileToolStripMenuItem.Name = "duplicateProfileToolStripMenuItem";
-            this.duplicateProfileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.duplicateProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.duplicateProfileToolStripMenuItem.Text = "Duplicate Profile";
             this.duplicateProfileToolStripMenuItem.Click += new System.EventHandler(this.duplicateProfileToolStripMenuItem_Click);
             // 
             // deleteProfileToolStripMenuItem
             // 
             this.deleteProfileToolStripMenuItem.Name = "deleteProfileToolStripMenuItem";
-            this.deleteProfileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.deleteProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteProfileToolStripMenuItem.Text = "Delete Profile";
             this.deleteProfileToolStripMenuItem.Click += new System.EventHandler(this.deleteProfileToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -417,6 +417,7 @@
             this.listBoxRequiredMods.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRequiredMods.Size = new System.Drawing.Size(223, 277);
             this.listBoxRequiredMods.TabIndex = 2;
+            this.listBoxRequiredMods.SelectedIndexChanged += new System.EventHandler(this.listBoxRequiredMods_SelectedIndexChanged);
             // 
             // label12
             // 

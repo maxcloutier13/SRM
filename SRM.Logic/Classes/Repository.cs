@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using Newtonsoft.Json;
 
 namespace SRM.Logic.Classes
@@ -11,8 +12,8 @@ namespace SRM.Logic.Classes
         public string IconPath { get; set; } = string.Empty;
         public string ClientParams { get; set; } = "-noSplash -skipIntro -noPause";
         public ServerInfo ServerInfo { get; set; } = new ServerInfo();
-        public List<string> Mods { get; set; } = new List<string>();
-        public List<string> OptionalMods { get; set; } = new List<string>();
+        public BindingList<string> Mods { get; set; } = new BindingList<string>();
+        public BindingList<string> OptionalMods { get; set; } = new BindingList<string>();
 
         [JsonIgnore]
         public string BasePath { get; set; } = string.Empty;

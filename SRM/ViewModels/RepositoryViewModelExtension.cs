@@ -32,8 +32,8 @@ namespace SRM.ViewModels
                 IconPath = repositoryViewModel.IconPath,
                 ClientParams = repositoryViewModel.ClientParams,
                 ServerInfo = repositoryViewModel.ServerInfo.GetDataFromViewModel(),
-                Mods = new List<string>(repositoryViewModel.Mods),
-                OptionalMods = new List<string>(repositoryViewModel.OptionalMods),
+                Mods = repositoryViewModel.Mods,
+                OptionalMods = repositoryViewModel.OptionalMods,
                 BasePath = repositoryViewModel.BasePath
             };
         }
