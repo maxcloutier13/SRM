@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRM", "SRM\SRM.csproj", "{C9162FD3-08D8-4832-A953-34BECBFBCA2B}"
 EndProject
@@ -14,14 +14,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRM.Logic", "SRM.Logic\SRM.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Both|Any CPU = Both|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Both|Any CPU.ActiveCfg = Both|Any CPU
+		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Both|Any CPU.Build.0 = Both|Any CPU
 		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9162FD3-08D8-4832-A953-34BECBFBCA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07A1709-2AC6-43F8-906D-0B8C38335F81}.Both|Any CPU.ActiveCfg = Both|Any CPU
+		{A07A1709-2AC6-43F8-906D-0B8C38335F81}.Both|Any CPU.Build.0 = Both|Any CPU
 		{A07A1709-2AC6-43F8-906D-0B8C38335F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A07A1709-2AC6-43F8-906D-0B8C38335F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A07A1709-2AC6-43F8-906D-0B8C38335F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
